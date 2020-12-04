@@ -1,10 +1,6 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { getInput } from '../utils';
 
-const input = readFileSync(join(__dirname, './input.txt'))
-  .toString()
-  .split(/\n/)
-  .filter(v => !!v);
+const input = getInput('day2');
 
 const matcher = /(\d+)-(\d+) ([a-z]): (.*)/;
 

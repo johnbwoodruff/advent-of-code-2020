@@ -1,12 +1,6 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { getInput } from '../utils';
 
-// Pull in input
-const input = readFileSync(join(__dirname, './input.txt'))
-  .toString()
-  .split(/\n/)
-  .filter(v => !!v)
-  .map(n => parseInt(n, 10));
+const input = getInput('day1').map(n => parseInt(n, 10));
 
 // Part 1
 function part1(input: number[]): number {
